@@ -37,35 +37,3 @@ exports["test if getting non-existing cookie returns null"] = function(assert) {
 };
 
 require("sdk/test").run(exports);
-
-
-/*
-cookie = require('./cookie')
-
-exports['test Cookie Manager methods'] = (assert) ->
-  assert.ok cookie, 'exported object existence'
-  assert.ok cookie.set, 'set() method existence'
-  assert.ok cookie.get, 'get() method existence'
-  assert.ok cookie.remove, 'remove() method existence'
-
-exports['test Cookie Manager set() method'] = (assert) ->
-  cookie.set 'http://google.com/', 'aaa', 'bbb', 7*24*60*60*1000
-  result = cookie.get 'http://google.com/', 'aaa'
-  assert.equal result, 'bbb', 'set() method'
-
-exports['test Cookie Manager get() method'] = (assert) ->
-  cookie.set 'http://google.com/', 'aaa', 'bbb', 7*24*60*60*1000
-  result = cookie.get 'http://google.com/', 'aaa'
-  assert.equal result, 'bbb', 'get() method'
-
-exports['test Cookie Manager remove() method'] = (assert) ->
-  cookie.set 'http://google.com/', 'aaa', 'bbb', 7*24*60*60*1000
-  result_before_removal = cookie.get 'http://google.com/', 'aaa'
-  cookie.remove 'http://google.com/', 'aaa'
-  result_after_removal = cookie.get 'http://google.com/', 'aaa'
-  assert.equal result_before_removal, 'bbb', 'remove() method'
-  assert.equal result_after_removal, null, 'remove() method'
-
-require('sdk/test').run exports
-
-*/
