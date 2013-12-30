@@ -8,7 +8,7 @@ Usage
 
 ```javascript
 // Import the module.
-let cookieManager = require("./cookie-manager");
+let cookieManager = require("cookie-manager");
 
 // Set the cookie.
 // Cookie with key 'aaa' and value 'bbb' will be saved. It will be accessible
@@ -30,4 +30,30 @@ non_existing_cookie = cookieManager.get(domain, 'zzz'); // => null
 Instalation
 -----------
 
-TODO
+You can follow the [official documentation for installing modules][1], which recommends downloading and extracting the source code of module manually.
+
+But I think the better approach is to **clone the module from the GIT**, because it is easier and it will allow you to simply update the module anytime. You can clone the module to the ```packages``` directory in your SDK folder (it will be available for all your existing and future addons), or you can clone it to the ```packages``` directory in your addon (it will be available only for that addon).
+
+```sh
+# go to the packages directory
+cd packages
+# clone the repository (this will create the 'cookie-manager' directory)
+git clone https://github.com/fczbkk/cookie-manager.git
+```
+
+Don't forget to **add the module dependency** to your addons' ```package.json```:
+
+```json
+...
+"dependencies": ["cookie-manager"]
+...
+```
+
+If you want to **update the module** later, just pull the most recent version from GIT:
+
+```sh
+cd packages/cookie-manager
+git pull
+```
+
+  [1]: https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/adding-menus.html
