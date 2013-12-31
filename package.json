@@ -3,7 +3,7 @@
   "title": "Cookie Manager for Firefox SDK (Jetpack)",
   "id": "cookie-manager@fczbkk.com",
   "description": "Reusable module for cookie management in Firefox SDK (Jetpack).",
-  "keywords": ["cookie", "cookies"]
+  "keywords": ["cookie", "cookies"],
   "author": "Riki Fridrich <riki@fczbkk.com> (http://fczbkk.com/)",
   "license": "MPL 2.0",
   "version": "0.1.0"
