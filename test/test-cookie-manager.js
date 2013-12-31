@@ -36,4 +36,15 @@ exports["test if getting non-existing cookie returns null"] = function(assert) {
   assert.equal(non_existing_cookie, null);
 };
 
+// Convenience object.
+exports["test convenience object"] = function (assert) {
+  obj = new cookieManager.CookieManager(domain, 7);
+  obj.set('aaa', 'bbb');
+  obj.set('ccc', 'ddd');
+  obj.set('eee', 'fff');
+  obj.remove('ccc');
+  assert.equal(obj.get('aaa'), 'bbb');
+  assert.equal(obj.get('ccc'), null);
+}
+
 require("sdk/test").run(exports);
