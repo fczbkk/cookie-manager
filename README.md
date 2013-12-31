@@ -36,17 +36,12 @@ When working with cookies, most of the time you just want to set and get cookies
 // Import the module.
 let CookieManager = require('cookie-manager').CookieManager;
 
-// Create your object with default values.
+// Create your object with default values. All cookies will be saved for
+// domain '.google.com' and will be valid for 7 days.
 var MyCookies = new CookieManager('http://google.com/', 7);
 
-// Saves cookie 'aaa' with value 'bbb' for domain '.google.com'
-// that is valid for 7 days.
 MyCookies.set('aaa', 'bbb');
-
-// Get cookie's value.
 MyCookies.get('aaa'); // => 'bbb'
-
-// Remove the cookie.
 MyCookies.remove('aaa');
 ```
 
