@@ -27,6 +27,29 @@ removed_cookie = cookieManager.get(domain, 'aaa'); // => null
 non_existing_cookie = cookieManager.get(domain, 'zzz'); // => null
 ```
 
+Convenience object
+------------------
+
+When working with cookies, most of the time you just want to set and get cookies, that are specified for your project's domain. Also, you usualy set cookie's expiration in days instead of milliseconds. That's why there's a handy convenience object:
+
+```javascript
+// Import the module.
+let CookieManager = require('cookie-manager').CookieManager;
+
+// Create your object with default values.
+var MyCookies = new CookieManager('http://google.com/', 7);
+
+// Saves cookie 'aaa' with value 'bbb' for domain '.google.com'
+// that is valid for 7 days.
+MyCookies.set('aaa', 'bbb');
+
+// Get cookie's value.
+MyCookies.get('aaa'); // => 'bbb'
+
+// Remove the cookie.
+MyCookies.remove('aaa');
+```
+
 Instalation
 -----------
 
